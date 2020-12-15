@@ -11,8 +11,10 @@ venv/
 # Database
 db.sqlite3
 
-# Static folder
-static/
+# pytype static type analyzer
+.pytype/
+
+# static/
 
 # macOS
 ._*
