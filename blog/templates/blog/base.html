@@ -1,0 +1,37 @@
+<!--
+This creates the 'base' for every page in the website. It esablishes all
+the styles and simply leaves out (in the block content) the unique content of
+each page. The only display shown through this file is the title + background
+of 'Jordan's Blog' because that will appear on every page.
+-->
+
+{% load static %}
+<html>
+    <head>
+        <title>Jordan's Blog</title>
+
+        <!-- Links to Bootstrap CSS files -->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+        <!-- Imports Google's 'Lobster' font -->
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+        <!-- Links to local CSS file -->
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+    <body>
+        <div class="page-header">
+            <h1><a href="/">Jordan's Blog</a></h1>
+        </div>
+
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                {% block content %}
+                {% endblock %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
