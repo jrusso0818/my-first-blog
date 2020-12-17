@@ -11,10 +11,10 @@ venv/
 # Database
 db.sqlite3
 
-# pytype static type analyzer
-.pytype/
 
-# static/
+
+# Static folder at project root
+  /static/ #if this doesn't work try /static
 
 # macOS
 ._*
